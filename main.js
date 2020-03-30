@@ -200,7 +200,10 @@ healthcheck(callback) {
  	callbackError = error;
  	console.error(`\nError returned from GET request:\n${JSON.stringify(error)}`);
  	} else { 
+
+    console.log("data.body before *******",data.body);
     let bodyObj = JSON.parse(data.body); 
+    console.log("data.body after *******",data.body);
  	let resultArry = bodyObj.result;
  	let arr = [];
  	for (let resultObj in resultArry) { 
